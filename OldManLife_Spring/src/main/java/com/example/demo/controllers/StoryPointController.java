@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.models.StoryPoint;
 import com.example.demo.repositories.StoryRepository;
 
-@CrossOrigin(origins = "http://localhost:4200")	//	Should be the location that the angular server is hosted on
+@CrossOrigin(origins = "http://localhost:3000")	//	Should be the location that the angular server is hosted on
 @RestController    //	This is a Web Service
 @RequestMapping("/story")
 public class StoryPointController {

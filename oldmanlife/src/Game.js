@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 class Game extends React.Component {
-  constructor(){
+  constructor(props){
     super();
      this.state = {
        plot: "a",
@@ -15,7 +15,7 @@ class Game extends React.Component {
 
 
   
-  render(){
+  render() {
     return (
 
       <div className="game">
