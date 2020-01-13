@@ -15,12 +15,14 @@ class Game extends React.Component {
 
 
   
-  render() {
+  render(){
     return (
 
       <div className="game">
         <p>{this.props.plot} </p>
-      <button >{ this.state.buttonOneText }</button>
+        <button>{ this.props.optionOne }</button>
+        <button> { this.props.optionTwo }</button>
+
    
       </div>
     )

@@ -8,8 +8,6 @@ import Game from './Game';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<Game />, document.getElementById('game'));
-
 
 
 // If you want your app to work offline and load faster, you can change

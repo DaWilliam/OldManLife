@@ -37,11 +37,14 @@ class App extends React.Component {
   }
   
   render(){
-    
+    console.log("heith the plot" + this.state.storyPoint.plotText)
     return (
       
       <div className="App">
-        <Game plot= {this.state.plot} ></Game>
+        <Game optionOne= {this.state.storyPoint.option1Text} optionTwo= {this.state.storyPoint.option2Text} plot= {this.state.storyPoint.plotText} >
+          
+        </Game>
+
       </div>
     )
   }
