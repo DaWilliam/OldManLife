@@ -20,7 +20,7 @@ class Game extends React.Component {
 
       <div className="game">
         <p>{this.props.plot} </p>
-      <button onClick= {}>{ this.state.buttonOneText }</button>
+      <button >{ this.state.buttonOneText }</button>
    
       </div>
     )

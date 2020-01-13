@@ -23,12 +23,15 @@ class App extends React.Component {
     .then(response =>
     { 
       if (response.ok)
+      {
         return response.json();
+      }
       else
         console.log("Error getting response"); 
     })
     .then(result => {      
       this.setState({storyPoint : result})
+      console.log(result)
       console.log(this.state.storyPoint.plotText);
     })
   }
