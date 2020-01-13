@@ -4,13 +4,14 @@ import './App.css';
 class Game extends React.Component {
   constructor(){
     super();
-    this.state = {
-     plot: "a",
-     buttonOneText: "b",
-     buttonTwoText: "c",
+     this.state = {
+       plot: "a",
+       buttonOneText: "b",
+       buttonTwoText: "c",
 
-    }
-  }
+     }
+   }  
+
 
 
   
@@ -18,9 +19,9 @@ class Game extends React.Component {
     return (
 
       <div className="game">
-        <p> {this.state.plot} </p>
-    <button>{ this.state.buttonOneText }</button>
-    <button>{ this.state.buttonTwoText }</button>
+        <p>{this.props.plot} </p>
+      <button onClick= {}>{ this.state.buttonOneText }</button>
+   
       </div>
     )
   }
