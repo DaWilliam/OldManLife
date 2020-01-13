@@ -6,4 +6,5 @@ import com.example.demo.models.*;
 
 public interface StoryRepository extends JpaRepository<StoryPoint, String>{
 	
+	StoryPoint findByTag(String tag);
 }

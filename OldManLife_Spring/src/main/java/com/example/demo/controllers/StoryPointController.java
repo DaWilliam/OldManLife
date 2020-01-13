@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.models.StoryPoint;
@@ -19,12 +20,15 @@ import com.example.demo.repositories.StoryRepository;
 public class StoryPointController {
 
 	@Autowired
-	StoryRepository storyRepository;
+	StoryRepository storyJpa;
 	
 	//	Gets the the next StoryPoint given the decision
 	@GetMapping("/{decision}")
 	public ResponseEntity<StoryPoint> GetStoryPoint(@PathVariable String decision)
 	{
-		return new ResponseEntity<StoryPoint>(new StoryPoint(), HttpStatus.OK);
+		//	Gets the next story point by the decision they made and return it
+		StoryPoint nextStoryPoint = storyJpa.findByTag(decision);
+		return new ResponseEntity<StoryPoint>(nextStoryPoint, HttpStatus.OK);
 	}
+	
 }
