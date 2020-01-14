@@ -17,11 +17,6 @@ p {
 }
 
 .game-button {
-    padding: 20px;
-
-}
-
-button {
     margin: 10px;
     padding: 20px 20px;
     border-radius: 10px;
@@ -30,6 +25,7 @@ button {
     color: black; 
     font-size: 20px;
     border: 2px solid rgb(38, 82, 177);
+    padding: 20px;
 }
 
 .game-plot {

@@ -20,7 +20,6 @@ class App extends React.Component {
     
   }
 
-  
   getPlotPoint = (decision) => {
     fetch('http://localhost:8080/story/' + decision)
     .then(response => response.json())
@@ -48,7 +47,6 @@ class App extends React.Component {
           return <Game plot={this.state.storyPoint.plotText} optionOne={this.state.storyPoint.option1Text} optionTwo={this.state.storyPoint.option2Text}
                   makeDecision={this.getPlotPoint}></Game>      
       }
-
   }
 
   playGame = () => {
