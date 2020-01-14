@@ -17,11 +17,12 @@ class App extends React.Component {
           key : 'init_key'
         }
     }
-    
+    this.getPlotPoint("First")
   }
 
-  getPlotPoint(decision) {
-    fetch('http://localhost:8080/story/' + decision)
+  
+  getPlotPoint= (tag) => {
+    fetch('http://localhost:8080/story/' + tag)
     .then(response => response.json())
     .then(result => {
       this.setState({storyPoint : result})
@@ -42,8 +43,10 @@ class App extends React.Component {
           return <Title playOnClick={this.playGame}></Title>
       else
       {          
-          return <Game plot={this.state.storyPoint.plotText} optionOne={this.state.storyPoint.option1Text} optionTwo={this.state.storyPoint.option2Text} ></Game>      
+          return <Game plot={this.state.storyPoint.plotText} optionOne={this.state.storyPoint.option1Text} optionTwo={this.state.storyPoint.option2Text}
+           makeDecision={this.getPlotPoint}  ></Game>      
       }
+
   }
 
   playGame = () => {

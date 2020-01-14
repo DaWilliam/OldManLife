@@ -2,23 +2,22 @@ import React from 'react';
 import './App.css';
 
 class Game extends React.Component {
-  constructor(){
+  constructor(props){
     super();
      this.state = {
-       plot: "a",
-       buttonOneText: "b",
-       buttonTwoText: "c",
 
      }
    }  
-
+  
   render(){
-    console.log("plot: " + this.props.plot);
     return (
+
       <div className="game">
         <p>{this.props.plot} </p>
-        <button>{ this.props.optionOne }</button>
-        <button> { this.props.optionTwo }</button>
+        <button onClick={this.props.makeDecision(this.props.optionOne)}>{ this.props.optionOne }</button>
+        <button onClick={this.props.makeDecision(this.props.optionTwo)}>{ this.props.optionTwo }</button>
+
+   
       </div>
     )
   }
