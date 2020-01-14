@@ -6,7 +6,7 @@ import Title from './Title';
 class App extends React.Component {
   constructor(){
     super();
-    this.state = {
+    this.state = {                
         isPlayin : false,
         storyPoint : {
           id : -1,
@@ -17,12 +17,12 @@ class App extends React.Component {
           key : 'init_key'
         }
     }
-    this.getPlotPoint("First")
+    
   }
 
   
-  getPlotPoint= (tag) => {
-    fetch('http://localhost:8080/story/' + tag)
+  getPlotPoint = (decision) => {
+    fetch('http://localhost:8080/story/' + decision)
     .then(response => response.json())
     .then(result => {
       this.setState({storyPoint : result})
@@ -40,7 +40,9 @@ class App extends React.Component {
 
   renderGame = () => {
       if(!this.state.isPlayin)
+      {
           return <Title playOnClick={this.playGame}></Title>
+      }
       else
       {          
           return <Game plot={this.state.storyPoint.plotText} optionOne={this.state.storyPoint.option1Text} optionTwo={this.state.storyPoint.option2Text}
@@ -50,6 +52,8 @@ class App extends React.Component {
   }
 
   playGame = () => {
+      console.log("Starting Game");
+      this.getPlotPoint("First")
       this.setState({isPlayin : true})
   }
 }
