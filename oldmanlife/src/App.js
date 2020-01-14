@@ -16,7 +16,7 @@ class App extends React.Component {
           option2Text : 'init_opt2'
         }
     }
-    
+    this.getPlotPoint('First')
   }
 
   getPlotPoint(decision) {
@@ -29,7 +29,6 @@ class App extends React.Component {
   }
   
   render(){
-    this.getPlotPoint(1)
     return (
       <div className="App">        
         {this.renderGame()}
@@ -39,9 +38,11 @@ class App extends React.Component {
 
   renderGame = () => {
       if(!this.state.isPlayin)
-          return <Title isPlayin={!this.state.isPlayin} playOnClick={this.playGame}></Title>
+          return <Title playOnClick={this.playGame}></Title>
       else
-          return <Game plot= {this.state.plot} ></Game>      
+      {          
+          return <Game plot={this.state.plotText} optionOne={this.state.option1Text} optionTwo={this.state.optionTwo} ></Game>      
+      }
   }
 
   playGame = () => {
