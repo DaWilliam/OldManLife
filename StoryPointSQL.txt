@@ -5,9 +5,9 @@ insert into story_points values(1, 'Go to the park', 'Watch Netflix', 'You slowl
 insert into story_points values(2, 'Go to the park', 'Watch Netflix', 'You feel your arteries get clogged.\nYou are done eating', 'Bacon');
 
 insert into story_points values(3, 'The Witcher', 'The Office', 'What do you watch?', 'Watch Netflix');
-insert into story_points values(4, '', '', 'You slowly dift into your sleep as Netflix prompts \'Are you still there?\'', 'The Office');
-insert into story_points values(5, '', '', 'You slowly dift into your sleep as Netflix prompts \'Are you still there?\'', 'The Witcher');
+insert into story_points values(4, 'The', 'End', 'You slowly dift into your sleep as Netflix prompts \'Are you still there?\'', 'The Office');
+insert into story_points values(5, 'The', 'End', 'You slowly dift into your sleep as Netflix prompts \'Are you still there?\'', 'The Witcher');
 
 insert into story_points values(6, 'Sit on rocking chair', 'Walk down front porch', 'You make it out of your front door wheezing and coughing.', 'Go to the park');
-insert into story_points values(7, '', '', 'You sit down, rock back and forth, enjoy the nice breeze and shuffling trees', 'Sit on rocking chair');
-insert into story_points values(8, '', '', 'You lift your right leg to take one step but accidentally trip on your other leg causing you to fall and break your back.\nYou slowly dift into your sleep as the ambulance arrives', 'Walk down front porch');
+insert into story_points values(7, 'The', 'End', 'You sit down, rock back and forth, enjoy the nice breeze and shuffling trees', 'Sit on rocking chair');
+insert into story_points values(8, 'The', 'End', 'You lift your right leg to take one step but accidentally trip on your other leg causing you to fall and break your back.\nYou slowly dift into your sleep as the ambulance arrives', 'Walk down front porch');
