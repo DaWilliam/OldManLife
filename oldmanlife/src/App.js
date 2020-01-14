@@ -17,7 +17,7 @@ class App extends React.Component {
           key : 'init_key'
         }
     }
-    this.getPlotPoint('First')
+    
   }
 
   getPlotPoint(decision) {
