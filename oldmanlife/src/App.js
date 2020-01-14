@@ -1,55 +1,52 @@
 import React from 'react';
 import './App.css';
 import Game from './Game';
+import Title from './Title';
 
 class App extends React.Component {
   constructor(){
     super();
-    this.state = {      
+    this.state = {
+        isPlayin : false,
         storyPoint : {
           id : -1,
           plotText : 'Hello',
           tag : 'init_tag',
           option1Text : 'init_opt1',
-          option2Text : 'init_opt2',
-          key : 'init_key',
+          option2Text : 'init_opt2'
         }
     }
-    this.getPlotPoint("First")
+    
   }
 
   getPlotPoint(decision) {
     fetch('http://localhost:8080/story/' + decision)
-    .then(response =>
-    { 
-      if (response.ok)
-      {
-        return response.json();
-      }
-      else
-        console.log("Error getting response"); 
-    })
-    .then(result => {      
+    .then(response => response.json())
+    .then(result => {
       this.setState({storyPoint : result})
       console.log(result)
-      console.log(this.state.storyPoint.plotText);
     })
   }
   
   render(){
-    console.log("heith the plot" + this.state.storyPoint.plotText)
+    this.getPlotPoint(1)
     return (
-      
-      <div className="App">
-        <Game optionOne= {this.state.storyPoint.option1Text} optionTwo= {this.state.storyPoint.option2Text} plot= {this.state.storyPoint.plotText} >
-          
-        </Game>
-
+      <div className="App">        
+        {this.renderGame()}
       </div>
     )
   }
+
+  renderGame = () => {
+      if(!this.state.isPlayin)
+          return <Title isPlayin={!this.state.isPlayin} playOnClick={this.playGame}></Title>
+      else
+          return <Game plot= {this.state.plot} ></Game>      
+  }
+
+  playGame = () => {
+      this.setState({isPlayin : true})
+  }
 }
-
-
 
 export default App;
