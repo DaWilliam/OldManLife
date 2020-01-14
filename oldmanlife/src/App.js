@@ -13,7 +13,8 @@ class App extends React.Component {
           plotText : 'Hello',
           tag : 'init_tag',
           option1Text : 'init_opt1',
-          option2Text : 'init_opt2'
+          option2Text : 'init_opt2',
+          key : 'init_key'
         }
     }
     this.getPlotPoint('First')
@@ -24,7 +25,7 @@ class App extends React.Component {
     .then(response => response.json())
     .then(result => {
       this.setState({storyPoint : result})
-      console.log(result)
+      console.log(this.state.storyPoint.plotText)
     })
   }
   
@@ -41,7 +42,7 @@ class App extends React.Component {
           return <Title playOnClick={this.playGame}></Title>
       else
       {          
-          return <Game plot={this.state.plotText} optionOne={this.state.option1Text} optionTwo={this.state.optionTwo} ></Game>      
+          return <Game plot={this.state.storyPoint.plotText} optionOne={this.state.storyPoint.option1Text} optionTwo={this.state.storyPoint.option2Text} ></Game>      
       }
   }
 
