@@ -45,7 +45,7 @@ class App extends React.Component {
       else
       {          
           return <Game plot={this.state.storyPoint.plotText} optionOne={this.state.storyPoint.option1Text} optionTwo={this.state.storyPoint.option2Text}
-                  makeDecision={this.getPlotPoint}></Game>      
+           makeDecision={this.getPlotPoint}  > "The end" </Game>      
       }
   }
 
