@@ -17,26 +17,36 @@ public class StoryPoint {
 	public String plotText;
 	public String option1Text;
 	public String option2Text;
+	public String gifURL;
 	
 	public StoryPoint() { }
 	
-	public StoryPoint(int id, String key, String plotText, String option1Text, String option2Text) {
+	public StoryPoint(int id, String key, String plotText, String option1Text, String option2Text, String gifURL) {
 		super();
 		this.id = id;
 		this.tag = key;
 		this.plotText = plotText;
 		this.option1Text = option1Text;
 		this.option2Text = option2Text;
+		this.gifURL = gifURL;
 	}
 	
 	
 	
-	public String getKey() {
+	public String getTag() {
 		return tag;
 	}
 
-	public void setKey(String key) {
-		this.tag = key;
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+
+	public String getGifURL() {
+		return gifURL;
+	}
+
+	public void setGifURL(String gifURL) {
+		this.gifURL = gifURL;
 	}
 
 	public int getId() {

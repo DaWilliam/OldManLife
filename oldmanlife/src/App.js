@@ -14,6 +14,7 @@ class App extends React.Component {
           tag : 'init_tag',
           option1Text : 'init_opt1',
           option2Text : 'init_opt2',
+          gifURL : 'init_gif',
           key : 'init_key'
         }
     }
@@ -45,7 +46,7 @@ class App extends React.Component {
       else
       {          
           return <Game plot={this.state.storyPoint.plotText} optionOne={this.state.storyPoint.option1Text} optionTwo={this.state.storyPoint.option2Text}
-                  makeDecision={this.getPlotPoint}></Game>      
+                  gifURL={this.state.storyPoint.gifURL} makeDecision={this.getPlotPoint} endGame={this.endGame}></Game>      
       }
   }
 
@@ -53,6 +54,10 @@ class App extends React.Component {
       console.log("Starting Game");
       this.getPlotPoint("First")
       this.setState({isPlayin : true})
+  }
+
+  endGame = () => {
+      this.setState({isPlayin : false});
   }
 }
 
