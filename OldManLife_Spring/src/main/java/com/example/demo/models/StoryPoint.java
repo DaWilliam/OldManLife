@@ -31,8 +31,6 @@ public class StoryPoint {
 		this.gifURL = gifURL;
 	}
 	
-	
-	
 	public String getTag() {
 		return tag;
 	}
