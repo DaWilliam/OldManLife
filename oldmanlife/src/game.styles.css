@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC&display=swap');
 
+
+
 p {
     
     width:500px;
@@ -29,5 +31,14 @@ p {
 }
 
 .game-plot {
-    margin-top: 10px;
+    margin-top: 80px;
+}
+
+.Title{
+    color: rgb(149, 186, 255);
+    font-size: 20px;    
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'IM Fell Great Primer SC', serif;
+
 }
